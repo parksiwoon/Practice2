@@ -12,6 +12,13 @@ class App {
       const carNamesInput = await Console.readLineAsync(); 
       validateCarNames(carNamesInput); 
       const carNames = carNamesInput.split(','); 
+      
+      // 2. 시도할 횟수 입력 받기
+      Console.print('시도할 횟수는 몇 회인가요?'); 
+      const tryCountInput = await Console.readLineAsync(); // 사용자 입력 대기
+      const tryCount = parseInt(tryCountInput, 10); // 입력된 문자열을 정수로 변환
+      validateTryCount(tryCount); // 입력된 시도 횟수 유효성 검사
+
 
       // 자동차 객체 생성
       const cars = carNames.map(name => new Car(name)); // 자동차 이름을 기반으로 Car 인스턴스 생성
