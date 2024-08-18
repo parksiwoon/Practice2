@@ -38,7 +38,11 @@ class App {
       // 최종 우승자 출력
       Console.print(`최종 우승자 : ${winners.join(', ')}`);
 
-    }
+    }catch (error) {
+      // 6. 예외 처리
+      Console.print(error.message); // 발생한 에러 메시지 출력
+      throw error;  // 예외를 재발생시켜 테스트에서 잡을 수 있도록 합니다.
+
   }
 }
 
