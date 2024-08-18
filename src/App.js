@@ -31,6 +31,13 @@ class App {
           Console.print(`${car.name} : ${car.getPosition()}`); 
         });
       }
+      // 5. 최종 우승자 결정
+      const maxPosition = Math.max(...cars.map(car => car.position)); // 가장 멀리 이동한 자동차의 위치 계산
+      const winners = cars.filter(car => car.position === maxPosition).map(car => car.name); // 최종 우승자(들) 결정
+
+      // 최종 우승자 출력
+      Console.print(`최종 우승자 : ${winners.join(', ')}`);
+
     }
   }
 }
