@@ -42,9 +42,10 @@ class App {
       // 6. 예외 처리
       Console.print(error.message); // 발생한 에러 메시지 출력
       throw error;  // 예외를 재발생시켜 테스트에서 잡을 수 있도록 합니다.
-
+    }
   }
 }
+
 
 // App 클래스를 내보냅니다.
 export default App;

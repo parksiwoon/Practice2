@@ -1,8 +1,8 @@
 // src/generateRandomNumbers.js
+import { Random } from '@woowacourse/mission-utils';
+
 const generateRandomNumbers = () => {
-    return Math.floor(Math.random() * 10);
-  };
-  
-  module.exports = { generateRandomNumbers };
-  
-  
+  return Random.pickNumberInRange(0, 9);
+};
+
+export default generateRandomNumbers;

@@ -1,6 +1,5 @@
-// 기능 3: 자동차 클래스 정의
 // src/Car.js
-import { generateRandomNumbers } from './generateRandomNumbers.js'; // 파일 경로가 정확한지 확인하세요.
+import generateRandomNumbers from './generateRandomNumbers.js';
 
 class Car {
   constructor(name) {
